@@ -1,4 +1,4 @@
-# Distillation-Free One-Step Diffusion for Real-World Image Super-Resolution
+# Unleashing the Power of One-Step Diffusion based Image Super-Resolution via a Large-Scale Diffusion Discriminator
 
 Jianze Li, [Jiezhang Cao](https://www.jiezhangcao.com/), Zichen Zou, Xiongfei Su, Xin Yuan, [Yulun Zhang](http://yulunzhang.com/), [Yong Guo](https://www.guoyongcs.com/), and [Xiaokang Yang](https://scholar.google.com/citations?user=yDEavdMAAAAJ), "Distillation-Free One-Step Diffusion for Real-World Image Super-Resolution", arXiv, 2024
 
@@ -6,15 +6,11 @@ Jianze Li, [Jiezhang Cao](https://www.jiezhangcao.com/), Zichen Zou, Xiongfei Su
 
 
 
-> **Abstract:** Diffusion models have been achieving excellent performance for real-world image super-resolution (Real-ISR) with considerable computational costs. Current approaches are trying to derive one-step diffusion models from multi-step counterparts through knowledge distillation. However, these methods incur substantial training costs and may constrain the performance of the student model by the teacher's limitations. To tackle these issues, we propose DFOSD, a Distillation-Free One-Step Diffusion model. Specifically, we propose a noise-aware discriminator (NAD) to participate in adversarial training, further enhancing the authenticity of the generated content. Additionally, we improve the perceptual loss with edge-aware DISTS (EA-DISTS) to enhance the model's ability to generate fine details. Our experiments demonstrate that, compared with previous diffusion-based methods requiring dozens or even hundreds of steps, our DFOSD attains comparable or even superior results in both quantitative metrics and qualitative evaluations. Our DFOSD also abtains higher performance and efficiency compared with other one-step diffusion methods.
+> **Abstract:** Diffusion models have demonstrated excellent performance for real-world image super-resolution (Real-ISR), albeit at high computational costs. Most existing methods are trying to derive one-step diffusion models from multi-step counterparts through knowledge distillation (KD) or variational score distillation (VSD). However, these methods are limited by the capabilities of the teacher model, especially if the teacher model itself is not sufficiently strong. To tackle these issues, we propose a new One-Step **D**iffusion model with a larger-scale **D**iffusion **D**iscriminator for SR, called **D³SR**. Our discriminator is able to distill noisy features from any time step of diffusion models in the latent space. In this way, our diffusion discriminator breaks through the potential limitations imposed by the presence of a teacher model. Additionally, we improve the perceptual loss with edge-aware DISTS (EA-DISTS) to enhance the model's ability to generate fine details. Our experiments demonstrate that, compared with previous diffusion-based methods requiring dozens or even hundreds of steps, our **D³SR** attains comparable or even superior results in both quantitative metrics and qualitative evaluations. Moreover, compared with other methods, **D³SR** achieves at least **3×** faster inference speed and reduces parameters by at least **30%**.
+
 
 ![](figs/overview.png)
 Training framework of DFOSD.
-
-<p align="center">
-  <img src="figs/compare.png">
-</p>
-Visual comparisons (x4) of different DM-based Real-ISR methods, including their inference times and MACs (Multiply-Accumulate Operations), for an output size of 512x512. The inference times are measured on an A100 GPU.
 
 ---
 
@@ -33,7 +29,7 @@ Visual comparisons (x4) of different DM-based Real-ISR methods, including their 
 ## 🔎 Results
 
 <details>
-<summary>DFOSD achieves superior performance on Real-world datasets. (click to expand)</summary>
+<summary>D³SR achieves superior performance on Real-world datasets. (click to expand)</summary>
 
 - Quantitative no-reference (NR) metrics comparison with state-of-the-art DM-based methods for Real-ISR (&times;4). 
 <p align="center">
@@ -43,7 +39,7 @@ Visual comparisons (x4) of different DM-based Real-ISR methods, including their 
 </details>
 
 <details>
-<summary>DFOSD achieves the fastest inference speed. (click to expand)</summary>
+<summary>D³SR achieves the fastest inference speed. (click to expand)</summary>
 
 - Complexity comparison (&times;4) among different DM-based methods.
 <p align="center">
