@@ -1,6 +1,6 @@
 # Unleashing the Power of One-Step Diffusion based Image Super-Resolution via a Large-Scale Diffusion Discriminator
 
-Jianze Li, [Jiezhang Cao](https://www.jiezhangcao.com/), Zichen Zou, Xiongfei Su, Xin Yuan, [Yulun Zhang](http://yulunzhang.com/), [Yong Guo](https://www.guoyongcs.com/), and [Xiaokang Yang](https://scholar.google.com/citations?user=yDEavdMAAAAJ), "Distillation-Free One-Step Diffusion for Real-World Image Super-Resolution", arXiv, 2024
+Jianze Li, [Jiezhang Cao](https://www.jiezhangcao.com/), Zichen Zou, Xiongfei Su, Xin Yuan, [Yulun Zhang](http://yulunzhang.com/), [Yong Guo](https://www.guoyongcs.com/), and [Xiaokang Yang](https://scholar.google.com/citations?user=yDEavdMAAAAJ), "Unleashing the Power of One-Step Diffusion based Image Super-Resolution via a Large-Scale Diffusion Discriminator", NeurIPS, 2025
 
 [[arXiv](https://arxiv.org/pdf/2410.04224)] [[supplementary material](https://github.com/JianzeLi-114/DFOSD)] [visual results] [models]
 
